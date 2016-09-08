@@ -21,7 +21,7 @@ result = CloudVision::Parser.parse_analysis( raw_result )
 raw_result = CloudVision::Api.new( api_key ).analyze( image_file, :all )
 
 # Run some tests
-raw_result = CloudVision::Api.new( api_key ).analyze( image_file, [:facial, :labels] )
+raw_result = CloudVision::Api.new( api_key ).analyze( image_file, [:faces, :labels] )
 ```
 
 *Note*: Google's Cloud Vision implements a number of possible tests it can run on images. This function allows you to them them all, using `:all` or can pass an array. Possible values are:
@@ -43,7 +43,7 @@ analysis = CloudVision::Parser.parse_analysis( raw_result )
 ```
 
 ## Parsed formats
-### Facial Test
+### Faces Test
 ```javascript
 {
   faces: [
@@ -70,3 +70,96 @@ analysis = CloudVision::Parser.parse_analysis( raw_result )
   ]
 }
 ```
+
+### Safety Test
+```javascript
+{
+  safety: {
+    adult: -1,
+    spoof: -2,
+    medical: -1,
+    violence: -2
+  }
+}
+```
+
+### Text Test
+```javascript
+{
+  text: [
+    {
+      description: "Fresh Coffee", :locale=>"en"
+    }
+  ]
+}
+```
+
+### Logo Test
+```javascript
+{
+  logos: [
+    {
+      description: "Under Armour",
+      score: 52.81474000000001
+    }
+  ]
+}
+```
+
+### Labels Test
+```javascript
+{
+  labels: [
+    {
+      description: "vacation",
+      score: 92.342234
+    },
+    {
+      description: "boating",
+      score: 76.322818
+    },
+    {
+      description: "yacht",
+      score: 57.539123000000004
+    }
+  ]
+}
+```
+
+### Landmark Test
+```javascript
+{
+  landmarks: [
+    {
+      description: "Eiffel Tower",
+      score: 59.66081
+    }
+  ]
+}
+```
+
+### Properties Test
+```javascript
+{
+  properties: {
+    colors: [
+      {
+        hex: "#4E7EBE", 
+        score: 33.334911, 
+        percentage: 16.3028
+      },
+      {
+        hex: "#E7EBEE", 
+        score: 7.284198, 
+        percentage: 6.1303589
+      },
+      {
+        hex: "#4A566F", 
+        score: 6.377968200000001, 
+        percentage: 0.957127
+      }
+    ]
+  }
+}
+```
+
