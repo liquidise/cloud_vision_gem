@@ -9,7 +9,7 @@ raw_result = CloudVision::Api.new( api_key ).analyze( image_file, :all )
 result = CloudVision::Parser.parse_analysis( raw_result )
 ```
 
-### Api.analyze
+### CloudVision::Api.analyze
 **analyze( image_file, tests ) => [json] Raw Response**
 ```ruby
 # Run all tests
@@ -29,4 +29,4 @@ raw_result = CloudVision::Api.new( api_key ).analyze( image_file, [:facial, labe
 - `:landmarks` - recognizes common landmarks (White House, Eiffel Tower, etc)
 - `:properties` - most common colors
 
-### Parser.parse_analysis( raw_response )
+### CloudVision::Parser.parse_analysis( raw_response )
