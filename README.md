@@ -88,7 +88,8 @@ analysis = CloudVision::Parser.parse_analysis( raw_result )
 {
   text: [
     {
-      description: "Fresh Coffee", :locale=>"en"
+      description: "Fresh Coffee",
+      locale: "en"
     }
   ]
 }
