@@ -8,9 +8,9 @@ require 'cloud_vision'
 raw_result = CloudVision::Api.new( api_key ).analyze( image_file, :landmarks )
 result = CloudVision::Parser.parse_analysis( raw_result )
 
-# => {
-  labels: [{:description=>"Eiffel Tower", :locale=>nil, :score=>59.66081}]
-}
+# {
+#   labels: [{:description=>"Eiffel Tower", :locale=>nil, :score=>59.66081}]
+# }
 ```
 
 ## CloudVision::Api.analyze
