@@ -1,4 +1,4 @@
-## Cloud Vision Gem
+# Cloud Vision Gem
 
 Cloud Vision is a Ruby gem that makes using [Google's Cloud Vision](https://cloud.google.com/vision/) simple and clean. The gem is written in simple ruby and requires no other dependencies.
 
@@ -9,7 +9,7 @@ raw_result = CloudVision::Api.new( api_key ).analyze( image_file, :all )
 result = CloudVision::Parser.parse_analysis( raw_result )
 ```
 
-### CloudVision::Api.analyze
+## CloudVision::Api.analyze
 **analyze( image_file, tests ) => [json] Raw Response**
 ```ruby
 # Run all tests
@@ -29,4 +29,4 @@ raw_result = CloudVision::Api.new( api_key ).analyze( image_file, [:facial, labe
 - `:landmarks` - recognizes common landmarks (White House, Eiffel Tower, etc)
 - `:properties` - most common colors
 
-### CloudVision::Parser.parse_analysis( raw_response )
+## CloudVision::Parser.parse_analysis( raw_response )
