@@ -44,7 +44,7 @@ analysis = CloudVision::Parser.parse_analysis( raw_result )
 
 ## Parsed formats
 ### Facial Test
-```
+```javascript
 {
   faces: [
     {
