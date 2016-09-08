@@ -87,9 +87,6 @@ module CloudVision
 	      analysis[ RESPONSE_LABELS[FACIAL_TEST] ].each do |face_data|
 	        annotations = {}
 
-	        # Find the confidence in the image parse
-	        annotations[ :confidence ] = face_data[ 'detectionConfidence' ]
-
 	        # Only include face data for users with 4 bounding points
 	        if face_data['boundingPoly']['vertices'].length == 4
 	          top_left = face_data['boundingPoly']['vertices'][ 0 ]
@@ -102,6 +99,9 @@ module CloudVision
 	            height: bottom_right['y'].to_i - top_left['y'].to_i
 	          }
 	        end
+
+	        # Find the confidence in the image parse
+	        annotations[ :confidence ] = face_data[ 'detectionConfidence' ]
 
 	        # Store the image quality metrics
 	        annotations[ :quality ] = {

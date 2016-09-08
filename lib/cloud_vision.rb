@@ -1,6 +1,6 @@
 module CloudVision
 	SAFETY_TEST			= :safety
-	FACIAL_TEST			= :facial
+	FACIAL_TEST			= :faces
 	LABEL_TEST				= :labels
 	TEXT_TEST				= :text
 	LOGO_TEST				= :logos

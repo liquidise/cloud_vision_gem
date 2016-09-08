@@ -44,9 +44,8 @@ analysis = CloudVision::Parser.parse_analysis( raw_result )
 ### Facial Test
 ```
 {
-  facial: [
+  faces: [
     {
-      confidence: 0.619328,
       face: {
         x: 393,
         y: 179,
@@ -63,7 +62,8 @@ analysis = CloudVision::Parser.parse_analysis( raw_result )
         sorrow: -2,
         anger: -2,
         surprise: -2
-      }
+      },
+      confidence: 0.619328
     }
   ]
 }
