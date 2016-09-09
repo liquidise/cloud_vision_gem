@@ -44,6 +44,7 @@ analysis = CloudVision::Parser.parse_analysis( raw_result )
 
 ## Parsed formats
 ### Faces Test
+Note: Cloud Vision reports some of these values as a scale from "Very Unlikely" to "Very Likely". This changes that into a numeric scale ranging from -2 (Very Unlikely) to 3 (Very Likely).
 ```javascript
 {
   faces: [
@@ -72,6 +73,7 @@ analysis = CloudVision::Parser.parse_analysis( raw_result )
 ```
 
 ### Safety Test
+Note: Cloud Vision reports these values as a scale from "Very Unlikely" to "Very Likely". This changes that into a numeric scale ranging from -2 (Very Unlikely) to 3 (Very Likely).
 ```javascript
 {
   safety: {
