@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
 	s.description		= "Simple and structured interactions with Google's Cloud Vision api"
 	s.authors			= ["Ben Roux"]
 	s.email				= 'liquid.ise@gmail.com'
-	s.homepage			= 'https://github.com/liquidise'
+	s.homepage			= 'https://github.com/liquidise/cloud_vision_gem'
 	s.license			= 'MIT'
 
 	s.files				= Dir['lib/*.rb']
