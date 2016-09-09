@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 	s.name				= 'cloud_vision'
-	s.version			= '0.0.1'
+	s.version			= '1.0.0'
 	s.date				= '2016-08-30'
 
 	s.summary			= 'Google Cloud Vision API gem'
