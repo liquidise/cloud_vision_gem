@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 	s.name				= 'cloud_vision'
-	s.version			= '1.0.1'
+	s.version			= '1.0.4'
 	s.date				= '2016-08-30'
 
 	s.summary			= 'Google Cloud Vision API gem'
@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
 	s.homepage			= 'https://github.com/liquidise/cloud_vision_gem'
 	s.license			= 'MIT'
 
-	s.files				= Dir['lib/*.rb']
+	s.files				= Dir['lib/**/*.rb']
 	s.require_path		= 'lib'
 end

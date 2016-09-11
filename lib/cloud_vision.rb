@@ -7,6 +7,6 @@ module CloudVision
 	LANDMARK_TEST		= :landmarks
 	PROPERTIES_TEST	= :properties
 
-	require 'cloud_vision/api'
-	require 'cloud_vision/parser'
+	require_relative 'cloud_vision/api'
+	require_relative 'cloud_vision/parser'
 end
